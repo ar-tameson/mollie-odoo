@@ -171,6 +171,10 @@ odoo.define('mollie.payment.form', function (require) {
                             this.cardToken = cardToken;
                             return _super();
                         }
+                        else {
+                            this._enableButton();
+                            $('body').unblock();
+                        }
                     });
             } else {
                 return this._super(...arguments);
